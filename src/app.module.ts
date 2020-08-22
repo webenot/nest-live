@@ -4,6 +4,7 @@ import * as dotenv from 'dotenv';
 
 // Domains
 import { CatsModule } from './cats/cats.module';
+import { DogsModule } from './dogs/dogs.module';
 
 dotenv.config();
 
@@ -11,7 +12,11 @@ dotenv.config();
   imports: [
     MongooseModule.forRoot(process.env.DB_URI),
     CatsModule,
+    DogsModule,
   ],
 })
+// @ts-ignore
 export class AppModule {
 }
+
+// @ts-ignore
